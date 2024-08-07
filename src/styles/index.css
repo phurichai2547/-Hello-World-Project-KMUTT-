@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Itim&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply main-gradient-bg;
+}
+
+body {
+  font-family: "Itim", sans-serif;
+  font-family: "Cherry Bomb One", cursive;
+}
+
+.main-gradient-bg {
+  @apply bg-custom-blue bg-gradient-to-b from-custom-pink to-custom-pink-transparent bg-cover;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-center-col {
+  @apply flex flex-col items-center justify-center;
+}
+
+.flex-around {
+  @apply flex items-center justify-around;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-start {
+  @apply flex items-center justify-start;
+}
+
+/* หน้า team
+width กรอบขาวเล็กกว่านี้
+(min-width: 425px) แก้ชื่อทีม h3(text ตรงที่เป็นกรอบกดได้)เป็นขนาด 14px
+(min-width: 1024px) ขอแก้ชื่อทีม h3(text ตรงที่เป็นกรอบกดได้)เป็นขนาด 24px
+(min-width: 1280px) ขอแก้ชื่อทีม h3(text ตรงที่เป็นกรอบกดได้)เป็นขนาด 32px
+at default(ถ้าไม่ผิดคือ 1440px) : img ด้านขวาเวลาที่เลือกทีมมาแล้วอยากให้ใหญ่กว่านี้สักนิดครับ ปัจจุบันเหมือนจะ 33.3% อยากลอง 50% แล้วเลื่อนขวาให้ไม่ทับกรอบครับ, h1 ในสเกลนี้ใช้ 64px ครับ */
+
+@media (min-width: 425px) {
+  .team-text {
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-text {
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .team-text {
+    font-size: 32px !important;
+  }
+}

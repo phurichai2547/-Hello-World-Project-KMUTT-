@@ -1,0 +1,27 @@
+name: CI
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Yarn install
+        run: yarn install --update-checksums
+
+      - name: Lint test (Testing Entire Code)
+        run: yarn run lint
